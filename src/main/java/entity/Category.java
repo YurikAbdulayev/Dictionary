@@ -1,0 +1,62 @@
+package entity;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by anri on 17.04.16.
+ */
+@Entity
+@Table(name = "category")
+public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    private String name;
+
+    @Column(name = "linked_image_adress")
+    private String linkedImageAdress;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+    private List<Word> words = new ArrayList<Word>();
+
+    public Category(String name, String linkedImageAdress) {
+        this.name = name;
+        this.linkedImageAdress = linkedImageAdress;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLinkedImageAdress() {
+        return linkedImageAdress;
+    }
+
+    public void setLinkedImageAdress(String linkedImageAdress) {
+        this.linkedImageAdress = linkedImageAdress;
+    }
+
+    public List<Word> getWords() {
+        return words;
+    }
+
+    public void setWords(List<Word> words) {
+        this.words = words;
+    }
+}

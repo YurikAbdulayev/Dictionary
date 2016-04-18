@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by anri on 17.04.16.
@@ -20,6 +21,14 @@ public class Word {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "synonym",
+            joinColumns = {@JoinColumn(name = "word_id")},
+            inverseJoinColumns = {@JoinColumn(name = "synonym_id")}
+    )
+    private List<Word> synonyms;
 
     public Word(String word, String value) {
         this.word = word;
@@ -61,5 +70,13 @@ public class Word {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public List<Word> getSynonyms() {
+        return synonyms;
+    }
+
+    public void setSynonyms(List<Word> synonyms) {
+        this.synonyms = synonyms;
     }
 }

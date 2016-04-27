@@ -17,15 +17,15 @@ public class Category {
 
     private String name;
 
-    @Column(name = "linked_image_adress")
-    private String linkedImageAdress;
+    @Column(name = "linked_image_address")
+    private String linkedImageAddress;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
     private List<Word> words = new ArrayList<Word>();
 
-    public Category(String name, String linkedImageAdress) {
+    public Category(String name, String linkedImageAddress) {
         this.name = name;
-        this.linkedImageAdress = linkedImageAdress;
+        this.linkedImageAddress = linkedImageAddress;
     }
 
     public int getId() {
@@ -44,12 +44,12 @@ public class Category {
         this.name = name;
     }
 
-    public String getLinkedImageAdress() {
-        return linkedImageAdress;
+    public String getLinkedImageAddress() {
+        return linkedImageAddress;
     }
 
-    public void setLinkedImageAdress(String linkedImageAdress) {
-        this.linkedImageAdress = linkedImageAdress;
+    public void setLinkedImageAddress(String linkedImageAddress) {
+        this.linkedImageAddress = linkedImageAddress;
     }
 
     public List<Word> getWords() {

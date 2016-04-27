@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,8 +17,6 @@ public class Word {
 
     private String word;
 
-    private String value;
-
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -30,13 +29,20 @@ public class Word {
     )
     private List<Word> synonyms;
 
-    public Word(String word, String value) {
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "word_sense",
+            joinColumns = {@JoinColumn(name = "word_id")},
+            inverseJoinColumns = {@JoinColumn(name = "sense_id")}
+    )
+    private List<Sense> senses = new ArrayList<Sense>();
+
+    public Word(String word) {
         this.word = word;
-        this.value = value;
     }
 
-    public Word(String word, String value, Category category) {
-        this(word, value);
+    public Word(String word, Category category) {
+        this(word);
         this.category = category;
     }
 
@@ -54,14 +60,6 @@ public class Word {
 
     public void setWord(String word) {
         this.word = word;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
     }
 
     public Category getCategory() {

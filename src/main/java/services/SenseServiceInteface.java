@@ -1,0 +1,18 @@
+package services;
+
+import entity.Sense;
+
+import java.util.List;
+
+/**
+ * Created by anri on 30.04.16.
+ */
+public interface SenseServiceInteface {
+
+    List<Sense> getSenses();
+    Sense getSenseById(int id);
+    void addSense(Sense sense);
+    void updateSense(Sense sense);
+    void deleteSense(Sense sense);
+
+}

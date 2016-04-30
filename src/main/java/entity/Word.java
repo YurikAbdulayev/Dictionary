@@ -21,7 +21,7 @@ public class Word {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
             name = "synonym",
             joinColumns = {@JoinColumn(name = "word_id")},
@@ -29,7 +29,7 @@ public class Word {
     )
     private List<Word> synonyms;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
             name = "word_sense",
             joinColumns = {@JoinColumn(name = "word_id")},
@@ -76,5 +76,13 @@ public class Word {
 
     public void setSynonyms(List<Word> synonyms) {
         this.synonyms = synonyms;
+    }
+
+    public List<Sense> getSenses() {
+        return senses;
+    }
+
+    public void setSenses(List<Sense> senses) {
+        this.senses = senses;
     }
 }

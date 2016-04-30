@@ -36,8 +36,9 @@ public abstract class BaseDAO<T> implements BaseDAOInterface<T> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public T getRowById(int id) {
-        return sessionFactory.getCurrentSession().get(type, id);
+        return (T) sessionFactory.getCurrentSession().get(type, id);
     }
 
     @Override

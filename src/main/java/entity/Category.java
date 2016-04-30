@@ -20,7 +20,7 @@ public class Category {
     @Column(name = "linked_image_address")
     private String linkedImageAddress;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+    @OneToMany(mappedBy = "category")
     private List<Word> words = new ArrayList<Word>();
 
     public Category(String name, String linkedImageAddress) {

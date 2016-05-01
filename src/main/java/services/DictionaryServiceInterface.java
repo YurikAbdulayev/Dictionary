@@ -5,6 +5,6 @@ package services;
  */
 public interface DictionaryServiceInterface extends
         CategoryServiceInterface,
-        SenseServiceInteface,
+        SenseServiceInterface,
         WordServiceInterface {
 }

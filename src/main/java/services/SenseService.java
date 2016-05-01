@@ -2,14 +2,13 @@ package services;
 
 import DAOs.SenseDAO;
 import entity.Sense;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 /**
  * Created by anri on 30.04.16.
  */
-public class SenseService implements SenseServiceInteface {
+public class SenseService implements SenseServiceInterface {
 
     private SenseDAO senseDAO;
 

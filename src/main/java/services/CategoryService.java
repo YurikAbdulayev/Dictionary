@@ -2,7 +2,6 @@ package services;
 
 import DAOs.CategoryDAO;
 import entity.Category;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

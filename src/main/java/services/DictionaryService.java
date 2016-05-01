@@ -3,7 +3,6 @@ package services;
 import entity.Category;
 import entity.Sense;
 import entity.Word;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

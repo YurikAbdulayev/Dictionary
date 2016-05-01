@@ -14,7 +14,7 @@
 <body>
 
   <c:forEach items="${words}" var="word">
-    <p>${word.category.name}, ${word.word}</p>
+    <p>${word.category.name}, ${word.word}, ${word.synonyms.get(0).word}, ${word.senses.get(0).sense}</p>
   </c:forEach>
 
 </body>

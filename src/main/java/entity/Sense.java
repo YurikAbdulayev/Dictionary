@@ -16,8 +16,10 @@ public class Sense {
 
     private String sense;
 
-    @ManyToMany(mappedBy = "senses")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "senses")
     private List<Word> words;
+
+    public Sense(){}
 
     public Sense(String sense) {
         this.sense = sense;

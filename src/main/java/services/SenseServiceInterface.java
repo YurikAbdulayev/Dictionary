@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by anri on 30.04.16.
  */
-public interface SenseServiceInteface {
+public interface SenseServiceInterface {
 
     List<Sense> getSenses();
     Sense getSenseById(int id);

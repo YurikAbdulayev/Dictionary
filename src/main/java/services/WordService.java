@@ -2,7 +2,6 @@ package services;
 
 import DAOs.WordDAO;
 import entity.Word;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

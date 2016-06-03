@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -10,14 +9,14 @@
   <meta name="description" content="Blueprint: " />
   <meta name="keywords" content="" />
   <meta name="author" content="Codrops" />
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="resources/css/style.css">
   <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../css/default.css" />
-  <link rel="stylesheet" type="text/css" href="/css/component.css" />
-  <script src="/js/modernizr.custom.js"></script>
-  <script src="/js/searchAnimate.js"></script>
-  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/component.css" />
+  <script src="resources/js/modernizr.custom.js"></script>
+  <script src="resources/js/searchAnimate.js"></script>
+  <script src="resources/img/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="resources/img/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -56,7 +55,7 @@
               <p>Тёлка - это хорошо и <br>даже очень</p><br><br>
               <button value="#searchBlock">Перейти к тёлке</button>
             </div>
-            <div class="imageCategory" style="background: url('../images/1.jpg') center;"></div>
+            <div class="imageCategory" style="background: url('resources/images/1.jpg') center;"></div>
           </a>
         </li><li>
         <a>
@@ -65,7 +64,7 @@
             <p>Тёлка - это хорошо и <br>даже очень</p><br><br>
             <button value="#searchBlock">Перейти к тёлке</button>
           </div>
-          <div class="imageCategory" style="background: url('/images/5.jpg') center;"></div>
+          <div class="imageCategory" style="background: url('resources/images/5.jpg') center;"></div>
         </a>
       </li>
         <li>
@@ -75,7 +74,7 @@
               <p>Лёва - очень добрый <br> и почти не кусаеться</p><br><br>
               <button value="#searchBlock">Перейти к лёве</button>
             </div>
-            <div class="imageCategory" style="background: url('/images/2.jpg') center;"></div>
+            <div class="imageCategory" style="background: url('resources/images/2.jpg') center;"></div>
           </a>
         </li>
         <li>
@@ -85,7 +84,7 @@
               <p>ДНК - дезокси-рибонуклииновая<br> кислота</p><br><br>
               <button value="#searchBlock">Перейти к лёве</button>
             </div>
-            <div class="imageCategory" style="background: url('/images/3.jpg') center;"></div>
+            <div class="imageCategory" style="background: url('resources/images/3.jpg') center;"></div>
           </a>
         </li>
         <li>
@@ -93,7 +92,7 @@
             <div class="titleSlide">
 
             </div>
-            <div class="imageCategory" style="background: url('/images/4.jpg') center;"></div>
+            <div class="imageCategory" style="background: url('resources/images/4.jpg') center;"></div>
           </a>
         </li>
         <li>
@@ -101,15 +100,15 @@
             <div class="titleSlide">
             </div>
 
-            <div class="imageCategory" style="background: url('/images/6.jpg') center;"></div>
-            <img src="images/5.jpg" alt="img05" style="height: 0px;">
+            <div class="imageCategory" style="background: url('resources/images/6.jpg') center;"></div>
+            <img src="resources/images/5.jpg" alt="img05" style="height: 0px;">
           </a>
         </li>
 
       </ul>
     </div>
   </div>
-  <script src="js/jquery.cbpFWSlider.min.js"></script>
+  <script src="resources/js/jquery.cbpFWSlider.min.js"></script>
 
   <script>
     $( function() {
@@ -126,7 +125,7 @@
     </form>
     <div id="resultSearch" style="display: none;">
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('/images/1.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/1.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -137,7 +136,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('/images/2.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/2.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -148,7 +147,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('/images/3.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/3.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 				<span>Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
@@ -158,7 +157,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('/images/4.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/4.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -169,7 +168,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('/images/5.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/5.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -185,7 +184,7 @@
   <div class="title" id="contacts">
     <div class="titles">Зворотній зв’язок</div>
   </div>
-  <div id="secondsection" style="background: url('/images/bgFeedBack.jpg')">
+  <div id="secondsection" style="background: url('resources/images/bgFeedBack.jpg')">
     <div style=" background-color: rgba(103, 47, 169, 0.31); padding: 10px">
       <div id="feedBackText">Є питання, чи пропозиції? Напишіть нам!</div>
       <form action=""id="feedBack">
@@ -202,7 +201,7 @@
   </div>
   <div id="thirdsection">
     <div class="our_people">
-      <div class="avatar" style="background: url('/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Юрік Абдулаєв
@@ -214,10 +213,10 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
-          Вадя Заверталюк
+          Вадимка Заверталюк
         </div>
         <hr>
         <div class="role">
@@ -226,7 +225,7 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Саньок Комісаренко
@@ -238,7 +237,7 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('/img/iam.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('resources/img/iam.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Костька Клугман

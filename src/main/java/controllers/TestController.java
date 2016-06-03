@@ -41,7 +41,8 @@ public class TestController {
     public String getAllInfTest(ModelMap model) {
         model.addAttribute("words", dictionaryService.getWords());
 
-        return "redirect:/test";
+//        return "redirect:/test";
+        return "dictionary";
     }
 
 }

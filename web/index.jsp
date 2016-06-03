@@ -24,7 +24,7 @@
   <script src="js/searchAnimate.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-
+<%--ЕБАНА ТВОЯ ХАТА--%>
   <script>
     $(document).ready(function() {
       $("button").click(function() {

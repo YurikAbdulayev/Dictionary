@@ -2,4 +2,4 @@
 target/
 clasess/
 out/
-lib/
+src/main/resources/dataSourceConfigs.xml

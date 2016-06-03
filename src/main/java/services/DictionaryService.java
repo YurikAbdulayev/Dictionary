@@ -29,7 +29,6 @@ public class DictionaryService implements DictionaryServiceInterface {
     // Category service methods //
     /////////////////////////////
 
-
     @Override
     public List<Category> getCategories() {
         return categoryService.getCategories();
@@ -59,7 +58,6 @@ public class DictionaryService implements DictionaryServiceInterface {
     // Sense service methods //
     //////////////////////////
 
-
     @Override
     public List<Sense> getSenses() {
         return senseService.getSenses();
@@ -88,7 +86,6 @@ public class DictionaryService implements DictionaryServiceInterface {
     ///////////////////////////
     // Word service methods //
     /////////////////////////
-
 
     @Override
     public List<Word> getWords() {

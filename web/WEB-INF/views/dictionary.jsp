@@ -48,7 +48,7 @@
   </div>
   <div class="container">
     <%--<body>--%>
-    <%--<c:forEach items="${words}" var="word">--%>
+    <%--<c:forEach items="${words}" var="word">--%>asdasdasdasdasdas
       <%--, ${word.word}, ${word.synonyms.get(0).word}, ${word.senses.get(0).sense}--%>
 
     <div id="cbp-fwslider" class="cbp-fwslider">

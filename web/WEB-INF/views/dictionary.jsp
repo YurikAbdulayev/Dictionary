@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,21 +47,30 @@
     <div class="titles">Категорії</div>
   </div>
   <div class="container">
+    <%--<body>--%>
+    <%--<c:forEach items="${words}" var="word">--%>
+      <%--, ${word.word}, ${word.synonyms.get(0).word}, ${word.senses.get(0).sense}--%>
+
     <div id="cbp-fwslider" class="cbp-fwslider">
+      <body>
+
       <ul>
+        <c:forEach items="${words}" var="word">
         <li>
           <a>
             <div class="titleSlide">
-              <h3>Тёлка</h3><br>
+              <h3>${word.category.name}</h3><br>
               <p>Тёлка - это хорошо и <br>даже очень</p><br><br>
               <button value="#searchBlock">Перейти к тёлке</button>
             </div>
             <div class="imageCategory" style="background: url('resources/images/1.jpg') center;"></div>
           </a>
-        </li><li>
+        </li>
+        </c:forEach>
+        <li>
         <a>
           <div class="titleSlide">
-            <h3>Тёлка</h3><br>
+            <h3>${word.category.name}</h3><br>
             <p>Тёлка - это хорошо и <br>даже очень</p><br><br>
             <button value="#searchBlock">Перейти к тёлке</button>
           </div>
@@ -70,7 +80,7 @@
         <li>
           <a>
             <div class="titleSlide">
-              <h3>Лёва</h3><br>
+              <h3>${word.category.name}</h3><br>
               <p>Лёва - очень добрый <br> и почти не кусаеться</p><br><br>
               <button value="#searchBlock">Перейти к лёве</button>
             </div>
@@ -80,7 +90,7 @@
         <li>
           <a>
             <div class="titleSlide">
-              <h3>ДНК</h3><br>
+              <h3>${word.category.name}</h3><br>
               <p>ДНК - дезокси-рибонуклииновая<br> кислота</p><br><br>
               <button value="#searchBlock">Перейти к лёве</button>
             </div>
@@ -106,7 +116,11 @@
         </li>
 
       </ul>
+
+      </body>
     </div>
+
+    <%--</body>--%>
   </div>
   <script src="resources/js/jquery.cbpFWSlider.min.js"></script>
 
@@ -123,15 +137,24 @@
       <input type="text" onchange="anichange('#resultSearch')" id="query" placeholder="Що шукаємо?">
       <!--<input type="button" onclick="anichange('#resultSearch')" id="button_search" value="Знайти">-->
     </form>
+
+    <body>
+    <c:forEach items="${words}" var="word">
+
+
+
+
+
     <div id="resultSearch" style="display: none;">
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/1.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('resources/images/1.jpg') center; background-size: cover; ${word.category.name}">
+
         </div>
         <div class="wordBlock">
+
 					<span>
-						Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
-						бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
-						бла-бла-бла-бла-бла-
+						${word.word}: це ${word.senses.get(0).sense}
+                        Синонимы : ${word.synonyms.get(0).word}
 					</span>
         </div>
       </div>
@@ -178,7 +201,9 @@
 					</span>
         </div>
       </div>
-
+      </div>
+    </c:forEach>
+    </body>
     </div>
   </div>
   <div class="title" id="contacts">

@@ -13,8 +13,8 @@
 </head>
 <body>
 <c:forEach items="${word.senses}" var="sense">
-<%--<c:forEach items="${categoryWord}" var="sense">--%>
-  ${sense.sense}//а тут хуйчанский в рот польехал
+  ${word.word}
+  - це ${sense.sense}
 </c:forEach>
 </body>
 </html>

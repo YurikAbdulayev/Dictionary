@@ -72,7 +72,7 @@
       </body>
     </div>
 
-    <%--</body>--%>
+    </body>
   </div>
   <script src="/resources/js/jquery.cbpFWSlider.min.js"></script>
 

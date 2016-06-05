@@ -5,6 +5,6 @@
   <title>redir</title>
 </head>
 <body>
-  <c:redirect url="dictionary"/>
+  <c:redirect url="/dictionary"/>
 </body>
 </html>

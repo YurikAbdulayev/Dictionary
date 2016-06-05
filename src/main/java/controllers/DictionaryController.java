@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import services.DictionaryService;
 
+import java.sql.SQLException;
+
 /**
- * Created by anri on 30.04.16.
- */
+* Created by anri on 30.04.16.
+*/
 @Controller
 @RequestMapping(value = "/dictionary")
 public class DictionaryController {
@@ -18,11 +20,25 @@ public class DictionaryController {
     DictionaryService dictionaryService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String getAllInfTest(ModelMap model) {
+    public String getAllInfTest(ModelMap model) throws SQLException {
         model.addAttribute("words", dictionaryService.getWords());
         model.addAttribute("categories", dictionaryService.getCategories());
-
+//        model.addAttribute("sense",dictionaryService.getSenses());
         return "dictionary";
     }
+
+////    @RequestMapping(value = "/getCharNum", method = RequestMethod.GET)
+////    public @ResponseBody
+////    Response getCharNum(@RequestParam String text) {
+////
+////        Response result = new Response();
+////
+////        if (text != null) {
+////            result.setText(text);
+////            result.setCount(text.length());
+////        }
+////
+////        return result;
+//    }
 
 }

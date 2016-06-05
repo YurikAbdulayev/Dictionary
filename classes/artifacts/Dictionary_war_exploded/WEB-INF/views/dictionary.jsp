@@ -10,14 +10,42 @@
   <meta name="description" content="Blueprint: " />
   <meta name="keywords" content="" />
   <meta name="author" content="Codrops" />
-  <link rel="stylesheet" href="resources/css/style.css">
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="resources/css/default.css" />
-  <link rel="stylesheet" type="text/css" href="resources/css/component.css" />
-  <script src="resources/js/modernizr.custom.js"></script>
-  <script src="resources/js/searchAnimate.js"></script>
-  <script src="resources/img/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="resources/img/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <link rel="stylesheet" href="/resources/css/style.css">
+  <%--<link rel="shortcut icon" href="../favicon.ico">--%>
+  <link rel="stylesheet" type="text/css" href="/resources/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="/resources/css/component.css" />
+  <script src="/resources/js/modernizr.custom.js"></script>
+  <script src="/resources/js/searchAnimate.js"></script>
+  <script src="/resources/img/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/resources/img/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <%--<script type="text/JavaScript"--%>
+          <%--src="${pageContext.request.contextPath}/resources/js/jquery-1.9.1.min.js">--%>
+  <%--</script>--%>
+
+
+  <%--<script type="text/javascript">--%>
+    <%--function doAjax() {--%>
+
+      <%--var inputText = $("#input_str").val();--%>
+
+      <%--$.ajax({--%>
+        <%--url : 'getCharNum',--%>
+        <%--type: 'GET',--%>
+        <%--dataType: 'json',--%>
+        <%--contentType: 'application/json',--%>
+        <%--mimeType: 'application/json',--%>
+        <%--data : ({--%>
+          <%--text: inputText--%>
+        <%--}),--%>
+        <%--success: function (data) {--%>
+
+          <%--var result = '"'+data.text+'", '+data.count+' characters';--%>
+          <%--$("#result_text").text(result);--%>
+        <%--}--%>
+      <%--});--%>
+    <%--}--%>
+  <%--</script>--%>
+
 
   <script>
     $(document).ready(function() {
@@ -55,66 +83,19 @@
       <body>
 
       <ul>
-        <c:forEach items="${words}" var="word">
+        <c:forEach items="${categories}" var="category">
         <li>
           <a>
             <div class="titleSlide">
-              <h3>${word.category.name}</h3><br>
-              <p>Тёлка - это хорошо и <br>даже очень</p><br><br>
-              <button value="#searchBlock">Перейти к тёлке</button>
+              <h3>${category.name}</h3><br>
+              <%--<p>Тёлка - это хорошо и <br>даже очень</p><br><br>--%>
+              <button value="#searchBlock">Перейти к ${category.name}</button>
             </div>
-            <div class="imageCategory" style="background: url('resources/images/1.jpg') center;"></div>
+            <div class="imageCategory" style="background: url('/resources/images/1.jpg') center;"></div>
+            <img src="resources/images/1.jpg" alt="img01" style="height: 0px;">
           </a>
         </li>
         </c:forEach>
-        <%--<li>--%>
-        <%--<a>--%>
-          <%--<div class="titleSlide">--%>
-            <%--<h3>${word.category.name}</h3><br>--%>
-            <%--<p>Тёлка - это хорошо и <br>даже очень</p><br><br>--%>
-            <%--<button value="#searchBlock">Перейти к тёлке</button>--%>
-          <%--</div>--%>
-          <%--<div class="imageCategory" style="background: url('resources/images/5.jpg') center;"></div>--%>
-        <%--</a>--%>
-      <%--</li>--%>
-        <%--<li>--%>
-          <%--<a>--%>
-            <%--<div class="titleSlide">--%>
-              <%--<h3>${word.category.name}</h3><br>--%>
-              <%--<p>Лёва - очень добрый <br> и почти не кусаеться</p><br><br>--%>
-              <%--<button value="#searchBlock">Перейти к лёве</button>--%>
-            <%--</div>--%>
-            <%--<div class="imageCategory" style="background: url('resources/images/2.jpg') center;"></div>--%>
-          <%--</a>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-          <%--<a>--%>
-            <%--<div class="titleSlide">--%>
-              <%--<h3>${word.category.name}</h3><br>--%>
-              <%--<p>ДНК - дезокси-рибонуклииновая<br> кислота</p><br><br>--%>
-              <%--<button value="#searchBlock">Перейти к лёве</button>--%>
-            <%--</div>--%>
-            <%--<div class="imageCategory" style="background: url('resources/images/3.jpg') center;"></div>--%>
-          <%--</a>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-          <%--<a>--%>
-            <%--<div class="titleSlide">--%>
-
-            <%--</div>--%>
-            <%--<div class="imageCategory" style="background: url('resources/images/4.jpg') center;"></div>--%>
-          <%--</a>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-          <%--<a>--%>
-            <%--<div class="titleSlide">--%>
-            <%--</div>--%>
-
-            <%--<div class="imageCategory" style="background: url('resources/images/6.jpg') center;"></div>--%>
-            <%--<img src="resources/images/5.jpg" alt="img05" style="height: 0px;">--%>
-          <%--</a>--%>
-        <%--</li>--%>
-
       </ul>
 
       </body>
@@ -122,7 +103,7 @@
 
     <%--</body>--%>
   </div>
-  <script src="resources/js/jquery.cbpFWSlider.min.js"></script>
+  <script src="/resources/js/jquery.cbpFWSlider.min.js"></script>
 
   <script>
     $( function() {
@@ -135,19 +116,18 @@
   <div id="searchBlock">
     <form action="" id="search_line">
       <input type="text" onchange="anichange('#resultSearch')" id="query" placeholder="Що шукаємо?">
-      <!--<input type="button" onclick="anichange('#resultSearch')" id="button_search" value="Знайти">-->
+      <%--<!--<input type="button" onclick="anichange('#resultSearch')" id="button_search" value="Знайти">-->!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--%>
+      <%--<input id="input_str" type="text">--%>
+      <a class="nav_button grow" href="/home"> Скоро в кiно</a>
+      <%--<input type="button" value="OK" onclick="doAjax()">--%>
+      <%--<p  id="result_text"></p>--%>
     </form>
 
     <body>
     <c:forEach items="${words}" var="word">
-
-
-
-
-
     <div id="resultSearch" style="display: none;">
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/1.jpg') center; background-size: cover; ${word.category.name}">
+        <div class="categoryImgBlock" style="background: url('/resources/images/1.jpg') center; background-size: cover; ${word.category.name}">
 
         </div>
         <div class="wordBlock">
@@ -159,18 +139,25 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/2.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('/resources/images/2.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
-						Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
+                      <body>
+                      <h3>Enter text:</h3>
+                      <input id="input_str" type="text">
+                      <input type="button" value="OK" onclick="doAjax()">
+                      <p id="result_text"></p>
+                      </body>
+                      <%--<p id="result_text"></p>--%>
+                       Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
 						бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
 						бла-бла-бла-бла-бла-
 					</span>
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/3.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('/resources/images/3.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 				<span>Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
@@ -180,7 +167,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/4.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('/resources/images/4.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -191,7 +178,7 @@
         </div>
       </div>
       <div class="words">
-        <div class="categoryImgBlock" style="background: url('resources/images/5.jpg') center; background-size: cover;">
+        <div class="categoryImgBlock" style="background: url('/resources/images/5.jpg') center; background-size: cover;">
         </div>
         <div class="wordBlock">
 					<span>
@@ -209,7 +196,7 @@
   <div class="title" id="contacts">
     <div class="titles">Зворотній зв’язок</div>
   </div>
-  <div id="secondsection" style="background: url('resources/images/bgFeedBack.jpg')">
+  <div id="secondsection" style="background: url('/resources/images/bgFeedBack.jpg')">
     <div style=" background-color: rgba(103, 47, 169, 0.31); padding: 10px">
       <div id="feedBackText">Є питання, чи пропозиції? Напишіть нам!</div>
       <form action=""id="feedBack">
@@ -226,7 +213,7 @@
   </div>
   <div id="thirdsection">
     <div class="our_people">
-      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('/resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Юрік Абдулаєв
@@ -238,7 +225,7 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('/resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Вадимка Заверталюк
@@ -250,7 +237,7 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('resources/img/profile.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('/resources/img/profile.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Саньок Комісаренко
@@ -262,7 +249,7 @@
       </div>
     </div>
     <div class="our_people">
-      <div class="avatar" style="background: url('resources/img/iam.jpg') center; background-size: cover;"></div>
+      <div class="avatar" style="background: url('/resources/img/iam.jpg') center; background-size: cover;"></div>
       <div class="about">
         <div class="ful_names">
           Костька Клугман

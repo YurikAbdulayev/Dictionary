@@ -18,6 +18,34 @@
   <script src="/resources/js/searchAnimate.js"></script>
   <script src="/resources/img/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/resources/img/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <%--<script type="text/JavaScript"--%>
+          <%--src="${pageContext.request.contextPath}/resources/js/jquery-1.9.1.min.js">--%>
+  <%--</script>--%>
+
+
+  <%--<script type="text/javascript">--%>
+    <%--function doAjax() {--%>
+
+      <%--var inputText = $("#input_str").val();--%>
+
+      <%--$.ajax({--%>
+        <%--url : 'getCharNum',--%>
+        <%--type: 'GET',--%>
+        <%--dataType: 'json',--%>
+        <%--contentType: 'application/json',--%>
+        <%--mimeType: 'application/json',--%>
+        <%--data : ({--%>
+          <%--text: inputText--%>
+        <%--}),--%>
+        <%--success: function (data) {--%>
+
+          <%--var result = '"'+data.text+'", '+data.count+' characters';--%>
+          <%--$("#result_text").text(result);--%>
+        <%--}--%>
+      <%--});--%>
+    <%--}--%>
+  <%--</script>--%>
+
 
   <script>
     $(document).ready(function() {
@@ -48,7 +76,7 @@
   </div>
   <div class="container">
     <%--<body>--%>
-    <%--<c:forEach items="${words}" var="word">--%>asdasdasdasdasdas
+    <%--<c:forEach items="${words}" var="word">--%>
       <%--, ${word.word}, ${word.synonyms.get(0).word}, ${word.senses.get(0).sense}--%>
 
     <div id="cbp-fwslider" class="cbp-fwslider">
@@ -88,7 +116,11 @@
   <div id="searchBlock">
     <form action="" id="search_line">
       <input type="text" onchange="anichange('#resultSearch')" id="query" placeholder="Що шукаємо?">
-      <!--<input type="button" onclick="anichange('#resultSearch')" id="button_search" value="Знайти">-->
+      <%--<!--<input type="button" onclick="anichange('#resultSearch')" id="button_search" value="Знайти">-->!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--%>
+      <%--<input id="input_str" type="text">--%>
+      <a class="nav_button grow" href="/home"> Скоро в кiно</a>
+      <%--<input type="button" value="OK" onclick="doAjax()">--%>
+      <%--<p  id="result_text"></p>--%>
     </form>
 
     <body>
@@ -111,7 +143,14 @@
         </div>
         <div class="wordBlock">
 					<span>
-						Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
+                      <body>
+                      <h3>Enter text:</h3>
+                      <input id="input_str" type="text">
+                      <input type="button" value="OK" onclick="doAjax()">
+                      <p id="result_text"></p>
+                      </body>
+                      <%--<p id="result_text"></p>--%>
+                       Бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
 						бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-бла-
 						бла-бла-бла-бла-бла-
 					</span>

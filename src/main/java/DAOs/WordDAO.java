@@ -10,17 +10,14 @@ import java.util.List;
 public class WordDAO extends BaseDAO<Word> implements WordDAOInterface {
 
 
+//    @SuppressWarnings("unchecked")
+//    public List<Word> test(int id) {
+//        return sessionFactory.getCurrentSession().createQuery("from Word W where W.category.id = " + id + " order by W.word").list();
+//    }
+
     @Override
+    @SuppressWarnings("unchecked")
     public List<Word> getSortedCategoryWord(int categoryId) {
-        return sessionFactory
-                .getCurrentSession()
-//                .createQuery("from Word\n"+
-//                             " where Word.category like categoryId \n" +
-//                             "order by Word.word")
-                .createSQLQuery("select word\n" +
-                        "from word\n" +
-                        "where word.category_id like 'categoryId'\n" +
-                        "order by word.word")
-                .list();
+        return sessionFactory.getCurrentSession().createQuery("from Word W where W.category.id = " + categoryId + " order by W.word").list();
     }
 }

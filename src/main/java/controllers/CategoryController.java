@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import services.DictionaryService;
 
-import java.sql.SQLException;
-
 /**
  * Created by Вадимка on 05.06.2016.
  */
@@ -19,13 +17,13 @@ public class CategoryController {
     @Autowired
     DictionaryService dictionaryService;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String getAllInfTest(ModelMap model) throws SQLException {
-
-        model.addAttribute("categories", dictionaryService.getCategories());
-        return "category";
-
-    }
+//    @RequestMapping(method = RequestMethod.GET)
+//    public String getAllInfTest(ModelMap model) throws SQLException {
+//
+//        model.addAttribute("categories", dictionaryService.getCategories());
+//        return "category";
+//
+//    }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public String getInfoWord(ModelMap model, @PathVariable("id") int id){

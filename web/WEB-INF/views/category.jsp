@@ -15,9 +15,9 @@
 </head>
 <body>
 asdasdasd
-<c:forEach items="${categories}" var="category">
+<c:forEach items="${categoryWords}" var="category">
 
-  ${category.words}
+    ${category.word}
 
 </c:forEach>
 asdasdsadas

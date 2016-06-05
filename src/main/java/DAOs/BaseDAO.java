@@ -34,6 +34,12 @@ public abstract class BaseDAO<T> implements BaseDAOInterface<T> {
                 .createQuery("from " + type.getSimpleName())
                 .list();
     }
+//from Word where word.id
+//creareSQLQuery
+
+
+
+
 
     @Override
     @SuppressWarnings("unchecked")

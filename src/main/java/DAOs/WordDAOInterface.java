@@ -2,8 +2,11 @@ package DAOs;
 
 import entity.Word;
 
+import java.util.List;
+
 /**
  * Created by anri on 27.04.16.
  */
 public interface WordDAOInterface extends BaseDAOInterface<Word> {
+    List<Word> getSortedCategoryWord(int categoryId);
 }

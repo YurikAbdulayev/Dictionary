@@ -6,5 +6,6 @@ package services;
 public interface DictionaryServiceInterface extends
         CategoryServiceInterface,
         SenseServiceInterface,
+////тут метож
         WordServiceInterface {
 }

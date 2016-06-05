@@ -14,5 +14,6 @@ public interface WordServiceInterface {
     void addWord(Word word);
     void updateWord(Word word);
     void deleteWord(Word word);
+    List<Word> getSortedCategoryWords(int categoryId);///////////////
 
 }

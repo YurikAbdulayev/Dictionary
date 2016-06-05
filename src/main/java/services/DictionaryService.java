@@ -25,6 +25,9 @@ public class DictionaryService implements DictionaryServiceInterface {
         this.wordService = wordService;
     }
 
+
+
+    //тут я юзаю
     ///////////////////////////////
     // Category service methods //
     /////////////////////////////
@@ -111,5 +114,12 @@ public class DictionaryService implements DictionaryServiceInterface {
     public void deleteWord(Word word) {
         wordService.deleteWord(word);
     }
+
+    @Override
+    public List<Word> getSortedCategoryWords(int categoryId) {
+
+        return wordService.getSortedCategoryWords(categoryId);
+    }
+
 
 }

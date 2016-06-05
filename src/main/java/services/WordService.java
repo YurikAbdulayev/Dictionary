@@ -16,6 +16,12 @@ public class WordService implements WordServiceInterface {
         this.wordDAO = wordDAO;
     }
 
+
+    @Override
+    public List<Word> getSortedCategoryWords(int categoryId) {
+        return wordDAO.getSortedCategoryWord(categoryId);///
+    }
+
     @Override
     public List<Word> getWords() {
         return wordDAO.getTableRows();

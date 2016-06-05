@@ -12,8 +12,8 @@ import services.DictionaryService;
  * Created by Вадимка on 05.06.2016.
  */
 @Controller
-@RequestMapping(value = "/category")
-public class CategoryController {
+@RequestMapping(value = "/sense")
+public class SenseController {
     @Autowired
     DictionaryService dictionaryService;
 
@@ -25,13 +25,10 @@ public class CategoryController {
 //
 //    }
 
-    @RequestMapping(value="/{id}", method=RequestMethod.GET)
+    @RequestMapping(value="/{id}", method= RequestMethod.GET)
     public String getInfoWord(ModelMap model, @PathVariable("id") int id){
-        model.addAttribute("categoryWords",dictionaryService.getSortedCategoryWords(id));
-        
-        return "category";
+        model.addAttribute("word",dictionaryService.getWordById(id));
+        return "sense";
     }
-
-
-
 }
+

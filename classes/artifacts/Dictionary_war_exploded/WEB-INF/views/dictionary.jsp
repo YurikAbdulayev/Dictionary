@@ -54,13 +54,13 @@
       <body>
 
       <ul>
-        <c:forEach items="${categories}" var="category">
+        <c:forEach items="${categories}" var="word">
         <li>
-          <a href="/category/${category.id}">
+          <a href="/category/${word.id}">
             <div class="titleSlide">
-              <h3>${category.name}</h3><br>
+              <h3>${word.name}</h3><br>
               <%--<p>Тёлка - это хорошо и <br>даже очень</p><br><br>--%>
-              <button value="#searchBlock">Перейти к ${category.name}</button>
+              <button value="#searchBlock">Перейти к ${word.name}</button>
             </div>
             <div class="imageCategory" style="background: url('/resources/images/1.jpg') center;"></div>
             <img src="resources/images/1.jpg" alt="img01" style="height: 0px;">

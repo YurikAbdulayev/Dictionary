@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface WordDAOInterface extends BaseDAOInterface<Word> {
     List<Word> getSortedCategoryWord(int categoryId);
+    List<Word> getLikeWords(String likeString);
 }

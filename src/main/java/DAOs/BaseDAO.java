@@ -39,8 +39,6 @@ public abstract class BaseDAO<T> implements BaseDAOInterface<T> {
 
 
 
-
-
     @Override
     @SuppressWarnings("unchecked")
     public T getRowById(int id) {

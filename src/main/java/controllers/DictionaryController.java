@@ -21,7 +21,7 @@ public class DictionaryController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String getAllInfTest(ModelMap model) throws SQLException {
-        model.addAttribute("words", dictionaryService.getWords());
+        model.addAttribute("allWords", dictionaryService.getWords());
         model.addAttribute("categories", dictionaryService.getCategories());
 //        model.addAttribute("sense",dictionaryService.getSenses());
         return "dictionary";

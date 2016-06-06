@@ -23,6 +23,11 @@ public class WordService implements WordServiceInterface {
     }
 
     @Override
+    public List<Word> getLikeWords(String likeString) {
+        return wordDAO.getLikeWords(likeString);
+    }
+
+    @Override
     public List<Word> getWords() {
         return wordDAO.getTableRows();
     }

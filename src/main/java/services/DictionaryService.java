@@ -27,7 +27,6 @@ public class DictionaryService implements DictionaryServiceInterface {
 
 
 
-    //тут я юзаю
     ///////////////////////////////
     // Category service methods //
     /////////////////////////////
@@ -119,6 +118,11 @@ public class DictionaryService implements DictionaryServiceInterface {
     public List<Word> getSortedCategoryWords(int categoryId) {
 
         return wordService.getSortedCategoryWords(categoryId);
+    }
+
+    @Override
+    public List<Word> getLikeWords(String likeString) {
+        return wordService.getLikeWords(likeString);
     }
 
 

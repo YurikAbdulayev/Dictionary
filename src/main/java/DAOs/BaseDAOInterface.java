@@ -13,4 +13,5 @@ public interface BaseDAOInterface<T> {
     void update(T object);
     void delete(T object);
 
+
 }

@@ -87,7 +87,14 @@
     </div>
     <div id="searchBlock">
         <input type="text" onchange="anichange('#resultSearch')" onkeyup="search('#resultSearch')" id="query"
-               placeholder="Що шукаємо?">
+               placeholder="Що шукаємо?" autocomplete="off" list="test">
+        <dataList id="test">
+            <option>hasdfjkf</option>
+            <option>dsaa</option>
+            <option>asdsads</option>
+            <option>dasdasd</option>
+            <option>asadasd</option>
+        </dataList>
         <body>
         <div id="resultSearch" style="display: none;">
 

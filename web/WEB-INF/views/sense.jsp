@@ -7,14 +7,32 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/resources/css/category.css">
+  <script src="/resources/js/jquery.min.js"></script>
+  <script src="/resources/js/windowScript.js"></script>
+  <link rel="stylesheet" href="/resources/css/windowStyle.css">
 </head>
 <body>
-<c:forEach items="${word.senses}" var="sense">
-  ${word.word}
-  - це ${sense.sense}
-</c:forEach>
+<div id="imageBlock" style="background: url('/resources/images/6.jpg') center;">
+  <div id="titleBlock">
+    <header>
+      <a class="link" href="index.html">Головна</a>
+      <a class="link" href="category.html">Категорія</a>
+    </header>
+    <h1>Бла</h1>
+    <div id="senseBlock">
+      <c:forEach items="${word.senses}" var="sense">
+        ${word.word}
+        - це ${sense.sense}
+        <%--${word.synonym}--%>
+      </c:forEach>
+    </div>
+  </div>
+</div>
 </body>
 </html>

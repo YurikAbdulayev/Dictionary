@@ -16,22 +16,18 @@
         <header>
             <a class="link" href="index.html">Головна</a>
         </header>
-        <h1>Бла</h1>
+        <h1>IT</h1>
         <div id="senseBlock">
-            <c:forEach items="${categoryWords}" var="word">
-                <UL>
-                    <LI><a href="/sense/${word.id}"> ${word.word} </a>
-                </UL>
-            </c:forEach>
+
         </div>
     </div>
 </div>
 <div id="listCategoryBlock">
-    <ul>
-        <li>
-            <a href="word.html">gfbsjbgjhdsjhdsf</a>
-        </li>
-    </ul>
+            <c:forEach items="${categoryWords}" var="word">
+                <UL>
+                    <LI><a class="links" href="/sense/${word.id}"> ${word.word} </a>
+                </UL>
+            </c:forEach>
 </div>
 </body>
 </html>

@@ -24,7 +24,7 @@
       <a class="link" href="index.html">Головна</a>
       <a class="link" href="category.html">Категорія</a>
     </header>
-    <h1>Бла</h1>
+    <h1>IT</h1>
     <div id="senseBlock">
       <c:forEach items="${word.senses}" var="sense">
         ${word.word}

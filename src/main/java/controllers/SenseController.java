@@ -28,7 +28,7 @@ public class SenseController {
     @RequestMapping(value="/{id}", method= RequestMethod.GET)
     public String getInfoWord(ModelMap model, @PathVariable("id") int id){
         model.addAttribute("word",dictionaryService.getWords());
-        model.addAttribute("category",dictionaryService.getWordById(id));
+        model.addAttribute("word",dictionaryService.getWordById(id));
         return "sense";
     }
 }

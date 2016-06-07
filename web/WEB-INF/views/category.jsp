@@ -17,15 +17,8 @@
         <header>
             <a class="link" href="/dictionary">Головна</a>
         </header>
-        <%--<h1><a:forEach items="${category}" var="cat">--%>
-                <%--&lt;%&ndash;${cat.name}&ndash;%&gt;--%>
-            <%--</a:forEach>--%>
-        <%--</h1>--%>
-        <h1>!!!!!!!1
-            <a:forEach items="${category}" var="cat">
-                ${cat.name}
-            </a:forEach>
-            !!!!!!!1
+        <h1>
+            ${cat.name}
         </h1>
         <div id="senseBlock">
 
@@ -33,17 +26,9 @@
     </div>
 </div>
 <div id="listCategoryBlock">
-    !!!!!!!!!!11
-    <a:forEach items="${cat}" var="cat">
 
-
-        ${cat.id}</a>
-
-    </a:forEach>
-    !!!!!!!!!!!!1
             <c:forEach items="${categoryWords}" var="word">
                 <UL>
-                       <%--!!!! ${}!!!--%>
                     <LI><a class="links" href="/sense/${word.id}"> ${word.word} </a>
                 </UL>
             </c:forEach>

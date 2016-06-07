@@ -29,7 +29,7 @@ public class CategoryController {
     public String getInfoWord(ModelMap model, @PathVariable("id") int id){
 //        model.addAttribute("category",dictionaryService.getSortedCategoryWords(id));
         model.addAttribute("categoryWords",dictionaryService.getSortedCategoryWords(id));
-        model.addAttribute("category",dictionaryService.getCategoryById(id));
+        model.addAttribute("cat", dictionaryService.getCategoryById(id));
         return "category";
     }
 

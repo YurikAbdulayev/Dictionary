@@ -26,7 +26,6 @@
     <h1></h1>
     <div id="senseBlock">
       <c:forEach items="${word.senses}" var="sense">
-        <%--${word.category.get(1)}--%>
         ${word.word}
         - це ${sense.sense}
         <%--${word.synonym}--%>

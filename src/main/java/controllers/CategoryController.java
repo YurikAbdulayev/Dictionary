@@ -27,8 +27,9 @@ public class CategoryController {
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public String getInfoWord(ModelMap model, @PathVariable("id") int id){
+//        model.addAttribute("category",dictionaryService.getSortedCategoryWords(id));
         model.addAttribute("categoryWords",dictionaryService.getSortedCategoryWords(id));
-        
+        model.addAttribute("category",dictionaryService.getCategoryById(id));
         return "category";
     }
 

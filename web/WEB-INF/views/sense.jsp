@@ -21,12 +21,12 @@
 <div id="imageBlock" style="background: url('/resources/images/6.jpg') center;">
   <div id="titleBlock">
     <header>
-      <a class="link" href="index.html">Головна</a>
-      <a class="link" href="category.html">Категорія</a>
+      <a class="link" href="/dictionary">Головна</a>
     </header>
-    <h1>IT</h1>
+    <h1></h1>
     <div id="senseBlock">
       <c:forEach items="${word.senses}" var="sense">
+        <%--${word.category.get(1)}--%>
         ${word.word}
         - це ${sense.sense}
         <%--${word.synonym}--%>
